@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './about/about.component';
 import { ProductsComponent } from './products/products.component';
+import { ProductItemComponent } from './products/product-item/product-item.component';
  
 
 @NgModule({
@@ -15,6 +16,7 @@ import { ProductsComponent } from './products/products.component';
     IndexComponent,
     AboutComponent,
     ProductsComponent,
+    ProductItemComponent,
   ],
   imports: [
     BrowserModule,

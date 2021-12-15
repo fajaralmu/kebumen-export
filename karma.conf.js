@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/imagemosaicclient'),
+      dir: require('path').join(__dirname, './coverage/kebumenexport'),
       subdir: '.',
       reporters: [
         { type: 'html' },

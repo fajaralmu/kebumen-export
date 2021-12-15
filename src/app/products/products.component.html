@@ -1,1 +1,14 @@
-<p>products works!</p>
+<div class="container-fluid ">
+    <p></p>
+    <div style="padding-top: 5vh;">
+        <div class="text-center rounded w-80 bg-light" style="padding: 20px;  margin: auto;" >
+            <h3 style="margin: 50px;">Products</h3>
+            <p></p>
+            <div class="row">
+                <div app-product-item *ngFor="let item of products" [product]="item" class="col-md-3 ">
+
+                </div>
+            </div>
+        </div> 
+    </div>
+</div> 

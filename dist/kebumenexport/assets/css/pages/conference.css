@@ -1,0 +1,39 @@
+.btn-group {
+	width: 100%;
+}
+
+.chat-message-user {
+	margin-top: 5px;
+	padding: 3px;
+	background-color: #fdfd;
+	border-radius: 4px;
+}
+ 
+.chat-message-common {
+	margin-top: 5px;
+	padding: 3px; 
+	border-radius: 4px;
+	background-color: #cccccc;
+}
+
+#chat-list{
+	height: 400px;
+	overflow-y : scroll;
+	overfloe-x: none;
+}
+
+#recording-info{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 3px;
+	
+}
+
+.video-cover {
+	width: 150px;
+	height: 150px;
+	background-color: #cccccc;
+	text-align: center;
+	padding-top: 55px;
+}
+

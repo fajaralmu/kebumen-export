@@ -1,0 +1,20 @@
+<div *ngIf="product" class="shadow mb-5 bg-white">
+    <div class="catalog-item" style='background-image: url({{product.imageUrl}}); margin-left: 1px;'>
+        <h3 *ngIf="!product.imageUrl" class="pt-5 text-center text-capitalize text-secondary">{{product.name}}</h3>
+        <div class="catalog-label">
+            <div class="catalog-cover" (mouseover)="setMouseOver()" (mouseout)="setMouseOut()"> </div>
+            <span style="font-size: 1.5em;">{{productName}} </span>
+            <div *ngIf="mouseover" class="catalog-item-detail  ">
+                <div class="row">
+                    <p class="col-3"><strong>Price</strong></p>
+                    <p class="col-9">{{product.price}}</p>
+                    <p class="col-3"><strong>Desc</strong></p>
+                    <p class="col-9">{{product.description}}</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

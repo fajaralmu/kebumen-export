@@ -1,0 +1,41 @@
+.catalog-item {
+    /* margin: 3px; */ 
+    height: 250px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative; 
+}
+
+.catalog-cover {
+    position: absolute; width: 100%; height: 100%; z-index: 100;
+    
+}
+
+.catalog-label {
+    background-color: rgba(10,10,10, 0.5);
+    color: white;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    height: 20%;
+    transition-duration: 300ms;
+    width: 100%; 
+    z-index:  1;
+}
+.catalog-item:hover  .catalog-label {
+    cursor: pointer; height: 100%;
+}
+.catalog-label:hover {
+    cursor: pointer; height: 100%; 
+}
+
+.catalog-item-detail {
+    width: 95%;
+    padding-top: 10px;
+    border-top: solid 1px rgb(200,200,200);
+    color: white; 
+    position: relative;
+    z-index:  1;
+}

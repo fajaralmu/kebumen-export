@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "imagemosaicclient": {
+    "kebumenexport": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/imagemosaicclient",
+            "outputPath": "dist/kebumenexport",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "imagemosaicclient:build:production"
+              "browserTarget": "kebumenexport:build:production"
             },
             "development": {
-              "browserTarget": "imagemosaicclient:build:development"
+              "browserTarget": "kebumenexport:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "imagemosaicclient:build"
+            "browserTarget": "kebumenexport:build"
           }
         },
         "test": {
@@ -105,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "imagemosaicclient"
+  "defaultProject": "kebumenexport"
 }
