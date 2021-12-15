@@ -1,14 +1,4 @@
-body {
-	/* background-image: url("/universal-good-shop/res/img/sea-bg.jpg"); */
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	margin: 0;
-	background-color: teal;
-	width: 100%;
-	height: 100%
-}
-
+ 
 #loading-div {
 	width: 100%;
 	margin: auto;
@@ -19,6 +9,17 @@ body {
 .clickable:hover {
 	cursor: pointer;
 	background-color: gray;
+}
+.common_container {
+	margin: 0;
+    padding-top: 10vh;
+    height: 100vh;
+}
+.common_container_bg {
+    background-image: url('/assets/images/kbm2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @media screen and (max-width: 991px) {
@@ -43,9 +44,4 @@ body {
 		padding-left: 270px;
 	}
 }
-
-/******* REPORT *******/
-.chart-item-hr {
-	margin: 5px;
-	height: 15px;
-}
+ 

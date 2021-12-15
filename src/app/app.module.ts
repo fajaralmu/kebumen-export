@@ -6,7 +6,7 @@ import { IndexComponent } from './index/index.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './about/about.component';
-import { SubmitButtonComponent } from './submit-button/submit-button.component'; // <-- NgModel lives here
+import { ProductsComponent } from './products/products.component';
  
 
 @NgModule({
@@ -14,7 +14,7 @@ import { SubmitButtonComponent } from './submit-button/submit-button.component';
     AppComponent,
     IndexComponent,
     AboutComponent,
-    SubmitButtonComponent, 
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,

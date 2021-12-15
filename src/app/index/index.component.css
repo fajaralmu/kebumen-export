@@ -1,7 +1,9 @@
-#index_container
+
+
+#main-area
 {
-    padding-top: 10vh;
-    height: 100vh;
-    background-image: url('/assets/images/coconut.png');
-    background-position: center;
+    padding-right: 40px;
+    padding-left: 40px;
+    margin-top: 30vh;
+    text-align: center;
 }
