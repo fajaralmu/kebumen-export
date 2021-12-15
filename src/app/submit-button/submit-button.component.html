@@ -1,0 +1,4 @@
+
+<button *ngIf="!loading" (click)="submit()" class="btn btn-primary">Process Mosaic</button>
+<button *ngIf="loading" disabled class="btn btn-primary">Please Wait ...</button>
+<div *ngIf="error" class="alert alert-danger">{{errorMessage}}</div>

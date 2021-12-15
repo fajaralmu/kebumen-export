@@ -1,0 +1,7 @@
+#index_container
+{
+    padding-top: 10vh;
+    height: 100vh;
+    background-image: url('/assets/images/coconut.png');
+    background-position: center;
+}
