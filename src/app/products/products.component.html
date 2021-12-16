@@ -9,12 +9,12 @@
 </div>
 <div id="product_view" class="common_container common_container_bg">
     <div class="container-fluid " style="padding-top: 15vh;">
-        <div class="text-center bg-light rounded " style="padding: 40px; width: 80%;  margin: auto;">
+        <div class="text-center" style="padding: 40px; width: 80%;  margin: auto;">
             <h3 >PRODUCT</h3>
             <hr/>
            
                 <div class="row">
-                    <div app-product-item *ngFor="let item of products" [product]="item" class="col-md-3"
+                    <div app-product-item *ngFor="let item of products" [product]="item" class="col-md-12"
                         (showDetail)="showDetail($event)">
 
                     </div>
