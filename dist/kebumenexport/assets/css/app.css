@@ -29,27 +29,23 @@
 	background-color: rgba(255,255,255,1);
 	border-radius: 30px;
 }
-
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 576px) {
+	.catalog-item {
+		height: 20vh;
+	}
 	 
-	#sidebar-wrapper {
-		display: none;
+}
+@media screen and (max-width: 991px) and (min-width: 577px) {
+	.catalog-item {
+		height: 30vh;
 	}
-	#page-content {
-		padding-left: 10;
-	}
+	 
 }
 
 @media screen and (min-width: 992px) {
+	.catalog-item {
+		height: 50vh;
+	}
 	 
-	#navbar-top {
-		visibility: hidden;
-	}
-	#sidebar-wrapper {
-		display: block;
-	}
-	#page-content {
-		padding-left: 270px;
-	}
 }
  
