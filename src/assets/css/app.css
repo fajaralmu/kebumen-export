@@ -15,7 +15,7 @@
 .common_container {
 	margin: 0;
     padding-top: 1vh;
-    height: 100vh;
+    min-height: 100vh;
 	width: 100%;
 }
 .common_container_bg_NOT_USED {
