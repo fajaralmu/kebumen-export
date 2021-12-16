@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { doItLater } from 'src/app/util/EventUtil';
 
@@ -7,21 +7,65 @@ import { doItLater } from 'src/app/util/EventUtil';
   templateUrl: './product-item.component.html',
   styleUrls: ['./product-item.component.css']
 })
-export class ProductItemComponent implements OnInit {
+export class ProductItemComponent implements OnInit, AfterViewInit {
 
   @Input()
   product: Product | undefined;
   mouseover: boolean = false;
   transition: boolean = false;
+  displayedImage: string | undefined;
+  displayedImageIndex: number = 0;
 
   @Output()
-  showDetail:EventEmitter<Product> = new EventEmitter();
-  
+  showDetail: EventEmitter<Product> = new EventEmitter();
+  private loadedImages:string[] = [];
+
   constructor() {
   }
+  ngAfterViewInit(): void {
+    this.checkProduct();
+  }
 
-  showDetailProduct = (p:Product) => {
-    this.showDetail.emit(p);
+  checkProduct = () => {
+    if (this.product) {
+      this.displayedImage = this.product?.imageUrl;
+      return;
+    }
+    doItLater(this.checkProduct, 50);
+  }
+
+  showDetailProduct = (p: Product) => {
+    // this.showDetail.emit(p);
+  }
+
+  switchImage = () => {
+    if (this.mouseover == false)
+    {
+      return;
+    }
+    if (this.product) {
+      const p = this.product;
+      if (this.displayedImageIndex >= p.imageNames.length) {
+        this.displayedImageIndex = 0;
+      }
+      
+      const imageUrl:string = p.imageUrls[this.displayedImageIndex];
+      if ( this.loadedImages.indexOf(imageUrl) > 0 )
+      {
+        this.displayedImage = p.imageUrls[this.displayedImageIndex];
+        this.displayedImageIndex++;
+        return;
+      }
+      let img = new Image();
+      img.src = imageUrl;
+      img.onload = () => {
+        this.displayedImage = img.src;
+        this.displayedImageIndex++;
+        this.loadedImages.push(img.src);
+      }
+      
+    }
+    doItLater(this.switchImage, 1500);
   }
 
   get productName() {
@@ -29,30 +73,31 @@ export class ProductItemComponent implements OnInit {
       return this.product?.name.toUpperCase();
     }
     return this.product?.name.toUpperCase();// .substring(0, 16);
-  } 
-
-  ngOnInit(): void {
   }
 
-   /**
-   * mouseover true
+  ngOnInit(): void {
+
+  }
+  /**
+  * mouseover true
+  */
+  setMouseOver = () => {
+    this.transition = true;
+    doItLater(() => {
+      if (this.transition) {
+        this.mouseover = true;
+        this.switchImage();
+      }
+      this.transition = false;
+    }, 150);
+  }
+
+  /**
+   * mouseover false
    */
-    setMouseOver = ( ) => {
-      this.transition = true;
-      doItLater(()=>{
-        if (this.transition) {
-          this.mouseover= true;
-        }
-        this.transition = false;
-      }, 150);
-    }
-  
-    /**
-     * mouseover false
-     */
-    setMouseOut = () => { 
-      this.transition=false; 
-      this.mouseover=(false)
-    }
+  setMouseOut = () => {
+    this.transition = false;
+    this.mouseover = (false)
+  }
 
 }
