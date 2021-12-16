@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './about/about.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductItemComponent } from './products/product-item/product-item.component';
+import { ProductDetailComponent } from './products/product-detail/product-detail.component';
  
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ProductItemComponent } from './products/product-item/product-item.compo
     AboutComponent,
     ProductsComponent,
     ProductItemComponent,
+    ProductDetailComponent,
   ],
   imports: [
     BrowserModule,

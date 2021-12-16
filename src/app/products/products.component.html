@@ -1,14 +1,26 @@
-<div class="container-fluid ">
-    <p></p>
-    <div style="padding-top: 5vh;">
-        <div class="text-center rounded w-80 bg-light" style="padding: 20px;  margin: auto;" >
-            <h3 style="margin: 50px;">Products</h3>
-            <p></p>
+<div *ngIf="productDetail" 
+    style=" width: 100%; 
+            height: 100%; 
+            z-index: 10; 
+            position: absolute; 
+            background-color: rgba(100,100,100,0.5);">
+    <div style="position: relative; width: 60%;top: 20%; margin: auto;">
+        <div app-product-detail [product]="productDetail" (close)="hideDetail()"></div>
+    </div>
+</div>
+<div class="common_container bg-light">
+    <div class="text-center rounded w-80 " style="padding: 20px;  margin: auto;">
+        <h3 style="margin: 50px;">Products</h3>
+        <div style="overflow-y: scroll; height: 60vh; padding: 20px;">
             <div class="row">
-                <div app-product-item *ngFor="let item of products" [product]="item" class="col-md-3 ">
+                <div app-product-item *ngFor="let item of products" 
+                    [product]="item" 
+                    class="col-md-3"
+                    (showDetail)="showDetail($event)"
+                    >
 
                 </div>
             </div>
-        </div> 
+        </div>
     </div>
-</div> 
+</div>

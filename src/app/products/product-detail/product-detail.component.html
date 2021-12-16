@@ -1,0 +1,20 @@
+<div *ngIf="product" class="card" style=" height: 70vh ">
+    <div class="card-header">
+        Detail
+    </div>
+    <div class="card-body" style="padding: 20px;">
+        <h5 class="card-title">{{product.name}}</h5>
+        <div style="overflow-y: scroll; height: 75%; padding: 20px;">
+            <div class="row">
+                <div *ngFor="let image of product.imageUrls"  class="col-md-3">
+                    <img src="{{image}}" width="150" height="150"/>
+                </div>
+            </div>
+        </div>
+        <p></p>
+        <a (click)="hideDetail()" class="btn btn-dark">
+            <i class="fas fa-arrow-left" style="margin-right: 5px;"></i>
+            Back
+        </a>
+    </div>
+</div>

@@ -10,10 +10,22 @@ import { ProductService } from '../services/product.service';
 export class ProductsComponent implements OnInit {
 
   products:Product[] = [];
+  productDetail:Product | undefined;
+
   constructor(private service: ProductService) { }
 
   ngOnInit(): void {
     this.products = this.service.getProducts();
+  }
+
+  showDetail(p:Product)
+  {
+    this.productDetail = p;
+  }
+
+  hideDetail()
+  {
+    this.productDetail = undefined;
   }
 
 }
