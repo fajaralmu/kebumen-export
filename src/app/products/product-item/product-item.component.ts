@@ -2,12 +2,15 @@ import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output } from '@
 import { Product } from 'src/app/models/product';
 import { doItLater } from 'src/app/util/EventUtil';
 
+const IMAGE_ITEM_SWITCH_DELAY:number = 3000;
+
 @Component({
   selector: 'div[app-product-item]',
   templateUrl: './product-item.component.html',
   styleUrls: ['./product-item.component.css']
 })
 export class ProductItemComponent implements OnInit, AfterViewInit {
+  private static firstChangeDelay:number = 0;
 
   @Input()
   product: Product | undefined;
@@ -19,8 +22,10 @@ export class ProductItemComponent implements OnInit, AfterViewInit {
   @Output()
   showDetail: EventEmitter<Product> = new EventEmitter();
   private loadedImages:string[] = [];
-
+  private firstChangeDelay:number = 0;
   constructor() {
+    this.firstChangeDelay = ProductItemComponent.firstChangeDelay;
+    ProductItemComponent.firstChangeDelay+=2000;
   }
   ngAfterViewInit(): void {
     this.checkProduct();
@@ -29,6 +34,11 @@ export class ProductItemComponent implements OnInit, AfterViewInit {
   checkProduct = () => {
     if (this.product) {
       this.displayedImage = this.product?.imageUrl;
+      const t = setTimeout(()=>{
+        this.switchImage();
+        clearTimeout(t);
+      }, this.firstChangeDelay);
+     
       return;
     }
     doItLater(this.checkProduct, 50);
@@ -39,10 +49,7 @@ export class ProductItemComponent implements OnInit, AfterViewInit {
   }
 
   switchImage = () => {
-    if (this.mouseover == false)
-    {
-      return;
-    }
+    
     if (this.product) {
       const p = this.product;
       if (this.displayedImageIndex >= p.imageNames.length) {
@@ -54,6 +61,7 @@ export class ProductItemComponent implements OnInit, AfterViewInit {
       {
         this.displayedImage = p.imageUrls[this.displayedImageIndex];
         this.displayedImageIndex++;
+        doItLater(this.switchImage, IMAGE_ITEM_SWITCH_DELAY);
         return;
       }
       let img = new Image();
@@ -62,10 +70,11 @@ export class ProductItemComponent implements OnInit, AfterViewInit {
         this.displayedImage = img.src;
         this.displayedImageIndex++;
         this.loadedImages.push(img.src);
+        doItLater(this.switchImage, IMAGE_ITEM_SWITCH_DELAY);
       }
       
     }
-    doItLater(this.switchImage, 1500);
+    
   }
 
   get productName() {
@@ -97,7 +106,7 @@ export class ProductItemComponent implements OnInit, AfterViewInit {
    */
   setMouseOut = () => {
     this.transition = false;
-    this.mouseover = (false)
+    this.mouseover = false;
   }
 
 }
