@@ -5,7 +5,9 @@
 	position: fixed;
 	text-align: center;
 }
-
+* {
+	font-family: 'Montserrat', sans-serif;
+}
 .clickable:hover {
 	cursor: pointer;
 	background-color: gray;
@@ -22,6 +24,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.common_card {
+	background-color: rgba(255,255,255,1);
+	border-radius: 30px;
 }
 
 @media screen and (max-width: 991px) {

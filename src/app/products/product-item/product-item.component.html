@@ -1,5 +1,5 @@
-<div *ngIf="product" class="shadow mb-5 bg-white">
-    <div class="catalog-item" style='background-image: url({{product.imageUrl}}); margin-left: 1px;'>
+<div *ngIf="product" >
+    <div class="catalog-item mb-5"  style='background-image: url({{product.imageUrl}}); margin-left: 1px;'>
         <h3 *ngIf="!product.imageUrl" class="pt-5 text-center text-capitalize text-secondary">{{product.name}}</h3>
         <div class="catalog-label">
             <div class="catalog-cover" 

@@ -11,7 +11,7 @@ export class ProductService {
   getProducts() : Product[]
   {
     const products:Product[]  = [
-      new Product("Basketwork and wickerwork", 
+      new Product("Basketwork", 
                   "Desc Basketwork and wickerwork", 
                   "Basketwork-and-wickerwork.jpeg")
       .addImage("basket2.jpg", "basket3.jpg", "basket4.jpg", "basket5.jpg", "basket6.jpg", "basket7.jpg", "basket8.jpg"),
@@ -21,7 +21,7 @@ export class ProductService {
                   "Cocorope.jpeg")
       .addImage("cocorope2.jpg", "cocorope3.jpg"),
       
-      new Product("Handmade pots form coconut fiber", 
+      new Product("Pots", 
                   "Desc Handmade pots form coconut fiber", 
                   "Handmade-pots-form-coconut-fiber.jpeg")
       .addImage("pots2.jpg"),

@@ -26,9 +26,9 @@ export class ProductItemComponent implements OnInit {
 
   get productName() {
     if (this.mouseover) {
-      return this.product?.name;
+      return this.product?.name.toUpperCase();
     }
-    return this.product?.name.substring(0, 16);
+    return this.product?.name.toUpperCase();// .substring(0, 16);
   } 
 
   ngOnInit(): void {
