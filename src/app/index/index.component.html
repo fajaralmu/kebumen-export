@@ -1,9 +1,11 @@
-<div id="index_container" class="common_container common_container_bg">
+<div id="index_view" class="common_container common_container_bg">
   <div class="container-fluid">
     <div id="main-area">
-      <h2 class="text-white">COMPANY MOTTO</h2>
-      <p class="text-white">Kabupetan Kabumen memiliki sejarah tersendiri yaitu berdiri Kabupaten Kebumen dimana maksud yang dikandung untuk memberikan rasa bangga dan memiliki bagi warga masyarakat Kabupaten Kebumen yang selanjutnya dapat menumbuh kembangkan potensi-potensi yang ada sehingga dapat memajukan pembangunan di segala bidang</p>
-      <a class="btn btn-lg btn-outline-light" routerLink="/products">Our Product</a>
+      <h2 class="text-white">{{motto}}</h2>
+      <p class="text-white">{{description}}</p>
+      <!-- <a class="btn btn-lg btn-outline-light" routerLink="/products">Our Product</a> -->
+      <button class="btn btn-lg btn-outline-light mr-3"  (click)="scrollToProduct()" >Our Product</button>
+      <button class="btn btn-lg btn-outline-light" (click)="scrollToContact()" >Contact</button>
     </div>
   </div>
 </div>
