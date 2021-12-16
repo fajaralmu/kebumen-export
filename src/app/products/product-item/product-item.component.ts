@@ -95,7 +95,6 @@ export class ProductItemComponent implements OnInit, AfterViewInit {
     doItLater(() => {
       if (this.transition) {
         this.mouseover = true;
-        this.switchImage();
       }
       this.transition = false;
     }, 150);
