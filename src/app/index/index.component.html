@@ -1,11 +1,16 @@
-<div id="index_view" class="common_container common_container_bg">
-  <div class="container-fluid">
-    <div id="main-area"  class="text-dark">
-      <!-- <h2>{{motto}}</h2> -->
-      <p  >{{description}}</p>
-      <!-- <a class="btn btn-lg btn-outline-light" routerLink="/products">Our Product</a> -->
-      <!-- <button class="btn btn-lg btn-outline-dark mr-3"  (click)="scrollToProduct()" >Our Product</button>
-      <button class="btn btn-lg btn-outline-dark" (click)="scrollToContact()" >Contact</button> -->
+<div id="index_view" class="common_container" style="background-image: url({{imageUrl}}); position: absolute;"> 
+
+</div>
+<div class="common_container" style="background-color: rgba(70,70,100, 0.2); position: relative;">
+  <div class="container-fluid text-center vertical-center">
+    <div id="index_content">
+      <div class="index_title index_title_top">CRAFT</div>
+      <div class="text-white index_title">CORPORATION</div>
+      <div class="index_description text-white text-left">
+        <p class="index_description_item" *ngFor="let desc of descriptions">
+          {{desc}}
+        </p>
+      </div>
     </div>
   </div>
 </div>

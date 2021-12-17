@@ -1,9 +1,27 @@
 
 
-#main-area
+#index_view
+{  
+   background-position: center;
+   background-size: cover;
+} 
+.index_title
 {
-    padding-right: 40px;
-    padding-left: 40px;
-    margin-top: 40vh;
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    /* font-weight: bolder; */
+}
+.index_title_top
+{
+    color: black; 
+    margin-bottom: -0.6em;
+}
+
+.index_description
+{
+    margin-top: -1em;
+}
+.index_description_item
+{
+    margin-bottom: -0.5em;
 }

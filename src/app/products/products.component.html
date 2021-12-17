@@ -7,19 +7,16 @@
         <div app-product-detail [product]="productDetail" (close)="hideDetail()"></div>
     </div>
 </div>
-<div id="product_view" class="common_container common_container_bg">
-    <div class="container-fluid " style="padding-top: 15vh;">
-        <div class="text-center" style="padding: 40px; width: 80%;  margin: auto;">
-            <h3 >PRODUCT</h3>
-            <hr/>
-           
-                <div class="row">
-                    <div app-product-item *ngFor="let item of products" [product]="item" class="col-md-6"
-                        (showDetail)="showDetail($event)">
-
-                    </div>
-                </div>
-            
+<div id="product_view" class="common_container">
+    <div class="container-fluid">
+        <div class="row">
+            <div app-product-item  
+                 [product]="item"*ngFor="let item of products" 
+                 (showDetail)="showDetail($event)" 
+                 class="col-md-6" 
+                 style="padding: 10px; margin-bottom: -50px;">
+                 
+            </div>
         </div>
     </div>
 </div>
