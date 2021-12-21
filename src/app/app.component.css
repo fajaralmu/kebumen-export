@@ -36,12 +36,17 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: rgb(117,117,117);
+    transition-duration: 300ms;
     /* background-color: #1976d2; */
     color: white;
     font-weight: 600;
   }
-
+  .toolbar-bg-transparent {
+    background-color: rgba(117,117,117,0.2);
+  }
+  .toolbar-bg-solid {
+    background-color: rgba(117,117,117);
+  }
   .toolbar img {
     margin: 0 16px;
   }
@@ -264,6 +269,8 @@
     z-index: -10;
     width: 1920px;
   }
+
+  
 
   /* Responsive Styles */
   @media screen and (max-width: 767px) {

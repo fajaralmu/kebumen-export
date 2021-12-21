@@ -5,27 +5,17 @@
 	position: fixed;
 	text-align: center;
 }
-* {
-	/* font-family: 'Montserrat', sans-serif; */
-	font-family: 'Carlito';
-}
+ 
 .clickable:hover {
 	cursor: pointer;
 	background-color: gray;
 }
 .common_container {
-	margin: 0;
-    padding-top: 60px;
+	margin: 0; 
     min-height: 100vh;
 	width: 100%;
 }
-.common_container_bg_NOT_USED {
-    /* background-image: url('assets/images/kbm2.jpg'); */
-    background-image: url('https://fajaralmu.github.io/kebumen-export/dist/kebumenexport/assets/images/kbm2.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+ 
 .common_card {
 	background-color: rgba(255,255,255,1);
 	border-radius: 30px;
@@ -41,7 +31,10 @@
 	.catalog-item {
 		height: 20vh;
 	}
-	.index_title {
+	.index_title_top {
+		font-size: 4.3em;
+	}
+	.index_title_bottom {
 		font-size: 4em;
 	}
 	.index_description {
@@ -55,7 +48,10 @@
 	.catalog-item-name {
 		font-size: 1.5em;
 	}
-	.index_title {
+	.index_title_top {
+		font-size: 7.3em;
+	}
+	.index_title_bottom {
 		font-size: 7em;
 	}
 	.index_description {
@@ -70,7 +66,10 @@
 	.catalog-item-name {
 		font-size: 1.5em;
 	}
-	.index_title {
+	.index_title_top {
+		font-size: 14em;
+	}
+	.index_title_bottom {
 		font-size: 13em;
 	}
 	.index_description {

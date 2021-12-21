@@ -1,12 +1,11 @@
 .catalog-item {
-    /* margin: 3px; */ 
-    
+
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     position: relative;
-    /* border-radius: 30px; */
+    font-family: 'roboto-thin';
 }
 
 .catalog-cover {
@@ -22,21 +21,17 @@
     color: white;
     padding: 5px;
     position: absolute;
-    bottom: 0;
-    /* height: auto; */
+    bottom: 0; 
     height: 20%;
     transition-duration: 300ms;
     width: 100%; 
     z-index:  1;
-    /* border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px; */
 }
 .catalog-item:hover  .catalog-label {
     cursor: pointer; height: 100%;
 }
 .catalog-label:hover {
     cursor: pointer; height: 100%; 
-    /* border-radius: 30px; */
 }
 
 .catalog-item-detail {

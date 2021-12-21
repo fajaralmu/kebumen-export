@@ -7,14 +7,14 @@
         <div app-product-detail [product]="productDetail" (close)="hideDetail()"></div>
     </div>
 </div>
-<div id="product_view" class="common_container">
+<div id="product_view" class="common_container" style="padding-top:2px">
     <div class="container-fluid">
         <div class="row">
             <div app-product-item  
                  [product]="item"*ngFor="let item of products" 
                  (showDetail)="showDetail($event)" 
-                 class="col-md-6" 
-                 style="padding: 10px; margin-bottom: -50px;">
+                 class="col-lg-6" 
+                 style="padding-bottom: 2px; padding-right: 2px; padding-left: 2px ">
                  
             </div>
         </div>

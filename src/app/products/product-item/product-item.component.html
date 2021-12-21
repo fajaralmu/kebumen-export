@@ -1,4 +1,4 @@
-<div *ngIf="product" class="catalog-item mb-5 rounded" style='background-image: url({{displayedImage}}); margin-left: 1px;'>
+<div *ngIf="product" class="catalog-item rounded" style='background-image: url({{displayedImage}}); margin-left: 1px;'>
     <h3 *ngIf="!product.imageUrl" class="pt-5 text-center text-capitalize text-secondary">{{product.name}}</h3>
     <!-- <div class="catalog-label">
             <div class="catalog-cover" 
@@ -10,6 +10,6 @@
                 <p>{{product.description}}</p>
             </div>
         </div> -->
-    <h1 class="vertical-center text-white text-center w-100">{{productName}} </h1>
+    <h1 class="vertical-center text-white text-center w-100"><strong>{{productName}}</strong></h1>
 
 </div>
